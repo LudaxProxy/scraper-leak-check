@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scraper-leak-check"
+version = "0.1.0"
+description = "See your scraper the way a fingerprinting WAF sees it: IP, JA4/JA3 TLS fingerprint and HTTP headers — echo server + CLI, through any proxy."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ludax Proxy" }]
+keywords = [
+    "tls-fingerprint", "ja4", "ja3", "web-scraping", "proxy",
+    "anti-bot", "fingerprinting", "security",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+leak-check = "scraper_leak_check.cli:main"
+
+[tool.setuptools]
+packages = ["scraper_leak_check"]
+
+[tool.setuptools.package-data]
+scraper_leak_check = ["dev-cert.pem", "dev-key.pem"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,10 @@
+{
+  "curl": "curl 7.87.0 (x86_64-w64-mingw32) libcurl/7.87.0 OpenSSL/1.1.1s (Schannel) zlib/1.2.13 brotli/1.0.9 zstd/1.5.2 libidn2/2.3.3 libpsl/0.21.1 (+libidn2/2.3.1) libssh2/1.10.0 nghttp2/1.51.0",
+  "local": "t13d3112h2_e8f1e7e78f70_8d633dac7124",
+  "reference": "t13d3112h2_e8f1e7e78f70_8d633dac7124",
+  "alpn": [
+    "h2",
+    "http/1.1"
+  ],
+  "match": true
+}
